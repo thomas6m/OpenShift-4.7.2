@@ -1,0 +1,33 @@
+$TTL    604800
+@       IN      SOA     dns-server.example.com. admin.example.com. (
+                  6     ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            2419200     ; Expire
+             604800     ; Negative Cache TTL
+)
+
+; name servers - NS records
+    IN      NS      dns-server.example.com.
+
+; name servers - PTR records
+1	IN    PTR    pfsense.example.com.
+3    	IN    PTR    ose-infra-server.example.com.
+4    	IN    PTR    dns-server.example.com.
+5    	IN    PTR    nfs-server.example.com.
+6    	IN    PTR    http-server.example.com.
+7    	IN    PTR    api-lb.example.com.
+8    	IN    PTR    app-ingress-lb.example.com.
+9    	IN    PTR    workstation.example.com.
+
+; OpenShift Container Platform Cluster - PTR records
+200 	IN    PTR    bootstrap.ose.example.com.
+201    	IN    PTR    master1.ose.example.com.
+202    	IN    PTR    master2.ose.example.com.
+203    	IN    PTR    master3.ose.example.com.
+204    	IN    PTR    worker1.ose.example.com.
+205    	IN    PTR    worker2.ose.example.com.
+206    	IN    PTR    infra1.ose.example.com.
+207    	IN    PTR    infra2.ose.example.com.
+7        	IN    PTR    api.ose.example.com.
+7       	IN    PTR    api-int.ose.example.com.
