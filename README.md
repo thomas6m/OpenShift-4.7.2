@@ -24,7 +24,7 @@ OpenShift Container Platform 4.7 installation on bare metal
 
 https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/latest/latest/rhcos-live.x86_64.iso 
 
-**Openshift-install latest binary ** :
+**Openshift-install latest binary:**
 
 https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-install-linux.tar.gz
 
