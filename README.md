@@ -101,5 +101,6 @@ Once bootstrap complete. Remove the bootstrap entry from api-load balancer.
 
 **Login to ose-infra server**
 
-sed -i.bak '/ bootstrap / s/^\(.*\)$/#\1/g'    /etc/api-haproxy/api-haproxy.cfg
+sed -i.bak '/ bootstrap / s/^\(.*\)$/#\1/g' /etc/api-haproxy/api-haproxy.cfg
+
 systemctl restart api-haproxy
