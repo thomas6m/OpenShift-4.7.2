@@ -91,7 +91,7 @@ coreos-installer install --ignition-url=http://http-server.example.com:8080/ose/
 
 Once file copy completed, reboot the VMs. 
 
-**Monitor the installation status **
+**Monitor the installation status**
 
 openshift-install --dir ~/ose-install wait-for bootstrap-complete --log-level=debug
 
