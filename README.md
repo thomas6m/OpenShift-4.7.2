@@ -55,6 +55,50 @@ cat ~/.ssh/id_rsa.pub
 
 cp ~/OpenShift-4.7_bare_metal_installation/ocp-4.7/install-config.yaml  ~/ose-install/
 
-Update ssh public key & pull secret
+add ssh public key & pull secret in  ~/ose-install/install-config.yaml
 
-vi ~/ose-install/install-config.yaml
+openshift-install create manifests --dir=ose-install/
+
+openshift-install create ignition-configs --dir=ose-install/
+
+tar -cvf ose-install.tar ose-install
+scp ose-install.tar root@ose-infra-server:/tmp/
+
+**Login to ose-infra-server** 
+
+cd ~ ; tar -xvf /tmp/ose-install.tar
+
+mkdir /var/www/html/ose
+cp -R ~/ose-install/* /var/www/html/ose/
+chown -R apache: /var/www/html/
+chmod -R 755 /var/www/html/
+
+Boot the bootstrap, master & worker VMs from rhcos live iso image
+
+From console execute the below command as root 
+
+Bootstrap VM:
+
+coreos-installer install --ignition-url=http://http-server.example.com:8080/ose/bootstrap.ign /dev/sda --insecure-ignition
+
+Master VMs:
+coreos-installer install --ignition-url=http://http-server.example.com:8080/ose/master.ign /dev/sda --insecure-ignition
+
+Worker VMs:
+coreos-installer install --ignition-url=http://http-server.example.com:8080/ose/worker.ign /dev/sda --insecure-ignition
+
+Once file copy completed, reboot the VMs. 
+
+Monitor the installation status 
+
+openshift-install --dir ~/ose-install wait-for bootstrap-complete --log-level=debug
+
+http://api-lb.example.com:9000/
+
+openshift-install --dir ~/ose-install wait-for install-complete
+
+Once bootstrap complete. Remove the bootstrap entry from api-load balancer.
+
+**Login to ose-infra server **
+sed -i.bak '/ bootstrap / s/^\(.*\)$/#\1/g'    /etc/api-haproxy/api-haproxy.cfg
+systemctl restart api-haproxy
