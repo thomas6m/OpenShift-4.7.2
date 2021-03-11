@@ -77,14 +77,16 @@ Boot the bootstrap, master & worker VMs from rhcos live iso image
 
 From console execute the below command as root 
 
-Bootstrap VM:
+**Bootstrap VM:**
 
 coreos-installer install --ignition-url=http://http-server.example.com:8080/ose/bootstrap.ign /dev/sda --insecure-ignition
 
-Master VMs:
+**Master VMs:**
+
 coreos-installer install --ignition-url=http://http-server.example.com:8080/ose/master.ign /dev/sda --insecure-ignition
 
-Worker VMs:
+**Worker VMs:**
+
 coreos-installer install --ignition-url=http://http-server.example.com:8080/ose/worker.ign /dev/sda --insecure-ignition
 
 Once file copy completed, reboot the VMs. 
