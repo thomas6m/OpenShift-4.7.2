@@ -1,0 +1,18 @@
+[Unit]
+Description=HAProxy Load Balancer
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Environment="CONFIG=/etc/app-ingress-haproxy/app-ingress-haproxy.cfg" "PIDFILE=/run/app-ingress-haproxy.pid"
+EnvironmentFile=/etc/sysconfig/app-ingress-haproxy
+ExecStartPre=/usr/sbin/app-ingress-haproxy -f $CONFIG -c -q $OPTIONS
+ExecStart=/usr/sbin/app-ingress-haproxy -Ws -f $CONFIG -p $PIDFILE $OPTIONS
+ExecReload=/usr/sbin/app-ingress-haproxy -f $CONFIG -c -q $OPTIONS
+ExecReload=/bin/kill -USR2 $MAINPID
+SuccessExitStatus=143
+KillMode=mixed
+Type=notify
+
+[Install]
+WantedBy=multi-user.target
