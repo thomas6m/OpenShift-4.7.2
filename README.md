@@ -350,7 +350,7 @@ C:\Windows\System32\drivers\etc\hosts
 https://console-openshift-console.apps.ose.example.com/
 
 
-**Grace full shutdown of cluster **
+**Grace full shutdown of cluster**
 
 nodes=$(oc get nodes -o jsonpath='{.items[*].metadata.name}')
 
@@ -362,6 +362,6 @@ do
 done
 
 
-**Shutdown all the VMs. **
+**Shutdown all the VMs.**
 
 
