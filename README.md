@@ -350,7 +350,10 @@ C:\Windows\System32\drivers\etc\hosts
 https://console-openshift-console.apps.ose.example.com/
 
 
-**Grace full shutdown of cluster**
+**Gracefull shutdown of cluster**
+
+https://docs.openshift.com/container-platform/4.7/backup_and_restore/graceful-cluster-shutdown.html
+
 
 nodes=$(oc get nodes -o jsonpath='{.items[*].metadata.name}')
 
