@@ -1,9 +1,6 @@
-# OpenShift Container Platform 4.7 installation on bare metal
+# OpenShit 4.7 installation on bare metal using UPI method:
 
-![image](https://user-images.githubusercontent.com/20621916/110903572-9d980d00-8342-11eb-9626-fd72af57a6be.png)
-
-
-**OpenShit 4.7 installation on bare metal using UPI method:**
+![image](https://user-images.githubusercontent.com/20621916/110904378-d71d4800-8343-11eb-9af8-697bd0e84aef.png)
 
 Install Vmware workstation 16 pro on Highend Workstation.
 
