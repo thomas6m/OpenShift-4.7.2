@@ -253,6 +253,8 @@ cat ~/.ssh/id_rsa.pub
 
 cp ~/OpenShift-4.7_bare_metal_installation/ocp-4.7/install-config.yaml  ~/ose-install/
 
+Create login id in https://cloud.redhat.com/openshift   -->  Create Cluster --> Datacenter  --> Bare Metal --> User-provisioned infrastructure --> Copy pull secret 
+
 add ssh public key & pull secret in  ~/ose-install/install-config.yaml
 
 openshift-install create manifests --dir=ose-install/
