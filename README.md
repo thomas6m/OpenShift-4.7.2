@@ -98,7 +98,7 @@
 	
 	systemctl enable app-ingress-haproxy && systemctl start app-ingress-haproxy && systemctl status app-ingress-haproxy
 	
-        Validation:
+	Validation:
 	
 	http://api-lb.example.com:9000/
 	
@@ -113,7 +113,8 @@
 	
 	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/httpd.conf /etc/httpd/conf/httpd.conf
     
-        mkdir -p /etc/systemd/system/httpd.service.d
+    
+    	mkdir -p /etc/systemd/system/httpd.service.d
 	
 	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/override.conf  /etc/systemd/system/httpd.service.d/override.conf 
 	
