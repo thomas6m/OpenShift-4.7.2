@@ -36,6 +36,9 @@ Vmware workstation 16pro setup :
 		Memory : 2 GB /Cpu: 2/Disk : 512GB
 		
 	        Network Adapter : 1 from Bridged  &  1 from VM-OSE
+		
+		OS image : https://www.centos.org/download/
+		
 
 	3. bootstrap, master1, master2, worker1 & worker2
 	
@@ -44,6 +47,9 @@ Vmware workstation 16pro setup :
                 Memory : 32 GB /Cpu: 16/Disk : 1024TB
 		
                 Network Adapter :  1 from VM-OSE
+		
+		RHCOS latest image : https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/latest/latest/rhcos-live.x86_64.iso
+		
 		
 	4. Configure DHCP server
 
