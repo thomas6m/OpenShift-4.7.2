@@ -1,4 +1,4 @@
-# OpenShit 4.7 installation on bare metal using UPI method:
+# OpenShift 4.7 installation on bare metal using UPI method:
 
 ![image](https://user-images.githubusercontent.com/20621916/110904378-d71d4800-8343-11eb-9af8-697bd0e84aef.png)
 
