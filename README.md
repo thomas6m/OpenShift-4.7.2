@@ -24,7 +24,7 @@ Vmware workstation 16pro setup :
 		
 	   	OS image - https://www.pfsense.org/download/     --> AMD64(64-bit) & DVD Image (ISO) installer
 		
-                Boot the server & accept all the default option
+                Boot the server & accept all the default options
 		
                 Once server is up, login to console with https://192.168.1.1  
 		
@@ -32,10 +32,10 @@ Vmware workstation 16pro setup :
 
 
 	2.  ose-infra-server & workstation  ( Centos8  with Minimal Installation)
-
- 		Memory : 2 GB /Cpu: 2/Disk : 512GB
+ 		
+		Memory : 2 GB /Cpu: 2/Disk : 512GB
 		
-		Network Adapter : 1 from Bridged  &  1 from VM-OSE
+	        Network Adapter : 1 from Bridged  &  1 from VM-OSE
 
 	3. bootstrap, master1, master2, worker1 & worker2
 	
@@ -44,6 +44,21 @@ Vmware workstation 16pro setup :
                 Memory : 32 GB /Cpu: 16/Disk : 1024TB
 		
                 Network Adapter :  1 from VM-OSE
+		
+	4. Configure DHCP server
+
+		https://192.168.1.1/  --> Services --> DHCP Server --> Select Enable --> Range ( 192.168.1.50  - 192.168.1.60)
+		
+		DNS server : 192.168.1.4 & 8.8.8.8
+		
+		Gateway : 192.168.1.1
+		
+		Domain name : example.com
+		
+		Domain search list : example.com;ose.example.com
+		
+		DHCP Static Mappings for this Interface : ( Get the MAC address of VM-OSE interface from all the newly create VM & update here )
+		
 		
 
 ![image](https://user-images.githubusercontent.com/20621916/110803087-cd4f0280-82b9-11eb-8772-615f6b978524.png)
