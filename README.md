@@ -112,9 +112,8 @@
 	cp -p /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf-bkp
 	
 	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/httpd.conf /etc/httpd/conf/httpd.conf
-    
-    
-    	mkdir -p /etc/systemd/system/httpd.service.d
+   	
+	mkdir -p /etc/systemd/system/httpd.service.d
 	
 	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/override.conf  /etc/systemd/system/httpd.service.d/override.conf 
 	
