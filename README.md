@@ -31,7 +31,9 @@
 		sample config :
 	
 		cat ~/OpenShift-4.7_bare_metal_installation/infra-setup/ifcfg-ens32:0 
-	
+	 
+	 	vi /etc/sysconfig/network-scripts/ifcfg-ens33:X
+		
 	Disable Ipv6:
 	
 		cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/70-ipv6.conf /etc/sysctl.d/70-ipv6.conf
@@ -41,6 +43,10 @@
 	Install the latest Patches:
 	
 		dnf install -y epel-release && dnf update -y && reboot
+		
+
+**Infra Services Setup:**
+
 
 ![image](https://user-images.githubusercontent.com/20621916/110881091-b391d780-831a-11eb-81a7-e10a56969739.png)
 
