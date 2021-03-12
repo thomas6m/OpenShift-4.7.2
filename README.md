@@ -332,7 +332,7 @@ oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}}{
 
 oc get csr
 
-Keeping checking & approving the pending CSR.  Stop once all nodes( master & worker ) are in ready state. 
+Keep checking & approving the pending CSR.  Stop once all nodes( master & worker ) are in ready state. 
 
 Wait till the console operator & other are fully up. 
 
