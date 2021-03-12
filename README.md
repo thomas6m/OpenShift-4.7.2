@@ -315,6 +315,10 @@ sed -i.bak '/ bootstrap / s/^\(.*\)$/#\1/g' /etc/api-haproxy/api-haproxy.cfg
 systemctl restart api-haproxy
 
 
+**Login to workstation** 
+
+export KUBECONFIG=~/ose-install/auth/kubeconfig
+
 oc whoami
 
 oc get nodes
@@ -338,12 +342,15 @@ Default Kubeadmin password
 
 cat ~/ose-install/auth/kubeadmin-password
 
-* Point your windows workstation primary dns to 192.168.1.4 & secondary to google or ur network dns.  Other wise we have to manually update the window's host file
+**Point your windows workstation primary dns to 192.168.1.4 & secondary to google or ur network dns.  Other wise we have to manually update the window's host file**
 
 C:\Windows\System32\drivers\etc\hosts
 
 
 https://console-openshift-console.apps.ose.example.com/
+
+
+**Grace full shutdown of cluster **
 
 nodes=$(oc get nodes -o jsonpath='{.items[*].metadata.name}')
 
@@ -353,3 +360,8 @@ do
     echo "==== Shut down $node ===="
     ssh core@$node sudo shutdown -h 1
 done
+
+
+**Shutdown all the VMs. **
+
+
