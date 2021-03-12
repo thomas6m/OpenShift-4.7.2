@@ -6,7 +6,7 @@
 
 ![image](https://user-images.githubusercontent.com/20621916/110800131-dbe7ea80-82b6-11eb-9529-f5fe780a4b97.png)
 
-**Infra Setup ( ose-infra-server & workstation ):**
+**Infra Server Setup ( ose-infra-server & workstation ):**
 
 	( ose-infra-server & Workstation - CentOS 8 Minimal Installation ) - https://www.centos.org/download/
 	
