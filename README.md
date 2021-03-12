@@ -26,9 +26,10 @@ Vmware workstation 16pro setup :
 		
                 Boot the server & accept all the default options
 		
-                Once server is up, login to console with https://192.168.1.1  
+                Once server is up, login to console  https://192.168.1.1  & complete the initial setup
 		
                 User: admin / Password: pfsense
+
 
 
 	2.  ose-infra-server & workstation  ( Centos8  with Minimal Installation)
