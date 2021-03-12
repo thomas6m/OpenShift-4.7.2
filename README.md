@@ -9,7 +9,7 @@
 **Infra Server Setup ( ose-infra-server & workstation ):**
 
 
-	**Step 1:** ( ose-infra-server & Workstation - CentOS 8 Minimal Installation ) - https://www.centos.org/download/
+**Step 1**: ( ose-infra-server & Workstation - CentOS 8 Minimal Installation ) - https://www.centos.org/download/
 	
 	Install the required binaries: 
         
@@ -54,23 +54,44 @@
 
 **Step 2: Install & Configure DNS server**
 
-dnf -y install bind bind-utils
+	dnf -y install bind bind-utils
 
-cp -p /etc/named.conf /etc/named.conf-bkp
+	cp -p /etc/named.conf /etc/named.conf-bkp
 
-cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/named.conf  /etc/named.conf 
+	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/named.conf  /etc/named.conf 
 
-cp  ~/OpenShift-4.7_bare_metal_installation/infra-setup/named.conf.local  /etc/named/named.conf.local
+	cp  ~/OpenShift-4.7_bare_metal_installation/infra-setup/named.conf.local  /etc/named/named.conf.local
 
-mkdir /etc/named/zones
+	mkdir /etc/named/zones
 
-cp  ~/OpenShift-4.7_bare_metal_installation/infra-setup/db.example.com /etc/named/zones/db.example.com
+	cp  ~/OpenShift-4.7_bare_metal_installation/infra-setup/db.example.com /etc/named/zones/db.example.com
 
-cp  ~/OpenShift-4.7_bare_metal_installation/infra-setup/db.192.168.1  /etc/named/zones/db.192.168.1
+	cp  ~/OpenShift-4.7_bare_metal_installation/infra-setup/db.192.168.1  /etc/named/zones/db.192.168.1
 
-systemctl enable named && systemctl start named && systemctl status named
+	systemctl enable named && systemctl start named && systemctl status named
 
+**Step 3: Install & Configure HAPROXY**
 
+	dnf install haproxy -y
+	
+	ln -s /usr/sbin/haproxy /usr/sbin/api-haproxy
+	
+	ln -s /usr/sbin/haproxy /usr/sbin/app-ingress-haproxy
+	
+	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy  /etc/sysconfig/api-haproxy 
+	
+	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/app-ingress-haproxy  /etc/sysconfig/app-ingress-haproxy
+	
+	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.service  /usr/lib/systemd/system/api-haproxy.service
+
+        cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.service  /usr/lib/systemd/system/app-ingress-haproxy.service
+	
+	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.cfg  /etc/api-haproxy/api-haproxy.cfg
+	
+	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/app-ingress-haproxy.cfg  /etc/api-haproxy/app-ingress-haproxy.cfg
+	
+	
+	
 
 ![image](https://user-images.githubusercontent.com/20621916/110803927-a80ec400-82ba-11eb-81d3-6411a691e2fa.png)
 
