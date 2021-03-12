@@ -20,6 +20,10 @@ OpenShift Container Platform 4.7 installation on bare metal
 
 ![image](https://user-images.githubusercontent.com/20621916/110803468-30409980-82ba-11eb-8c4d-2e662df261a0.png)
 
+
+![image](https://user-images.githubusercontent.com/20621916/110881091-b391d780-831a-11eb-81a7-e10a56969739.png)
+
+
 **RHCOS latest image** :
 
 https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/latest/latest/rhcos-live.x86_64.iso 
