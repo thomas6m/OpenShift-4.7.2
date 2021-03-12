@@ -342,7 +342,7 @@ Default Kubeadmin password
 
 cat ~/ose-install/auth/kubeadmin-password
 
-**Point your windows workstation primary dns to 192.168.1.4 & secondary to google or ur network dns.  Other wise we have to manually update the window's host file**
+**Point your workstation primary dns to 192.168.1.4 & secondary dns to google or ur network dns.  Other wise we will endup in manually updating the window's host file for each wildcard entry**
 
 C:\Windows\System32\drivers\etc\hosts
 
