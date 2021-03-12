@@ -313,3 +313,43 @@ Once bootstrap complete. Remove the bootstrap entry from api-load balancer.
 sed -i.bak '/ bootstrap / s/^\(.*\)$/#\1/g' /etc/api-haproxy/api-haproxy.cfg
 
 systemctl restart api-haproxy
+
+
+oc whoami
+
+oc get nodes
+
+oc get csr
+
+Approve all the pending CSR
+
+oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}}{{"\n"}}{{end}}{{end}}' | xargs oc adm certificate approve
+
+oc get csr
+
+Keeping checking & approving the pending CSR.  Stop once all nodes( master & worker ) are in ready state. 
+
+Wait till the console operator & other are fully up. 
+
+watch -n5 oc get clusteroperators
+
+
+Default Kubeadmin password 
+
+cat ~/ose-install/auth/kubeadmin-password
+
+* Point your windows workstation primary dns to 192.168.1.4 & secondary to google or ur network dns.  Other wise we have to manually update the window's host file
+
+C:\Windows\System32\drivers\etc\hosts
+
+
+https://console-openshift-console.apps.ose.example.com/
+
+nodes=$(oc get nodes -o jsonpath='{.items[*].metadata.name}')
+
+
+for node in ${nodes[@]}
+do
+    echo "==== Shut down $node ===="
+    ssh core@$node sudo shutdown -h 1
+done
