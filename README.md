@@ -343,7 +343,7 @@ Default Kubeadmin password
 
 cat ~/ose-install/auth/kubeadmin-password
 
-**Point your workstation primary dns to 192.168.1.4 & secondary dns to google ( 8.8.8.8 or ur network dns.  Other wise we will endup in manually updating the window's host file for each wildcard entry**
+**Update  your workstation network interface card's  primary dns to 192.168.1.4 & secondary dns to google ( 8.8.8.8 or your network dns.  Other wise we will endup manually updating the window's host file for each wildcard entry**
 
 ![image](https://user-images.githubusercontent.com/20621916/110895988-a6cead00-8335-11eb-9879-6dabbf7838d5.png)
 
