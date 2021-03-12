@@ -36,7 +36,7 @@ Vmware workstation 16pro setup :
  		
 		Memory : 2 GB /Cpu: 2/Disk : 512GB
 		
-	        Network Adapter : 1 from Bridged  &  1 from VM-OSE
+	        Network Adapter : 1 from VM-OSE
 		
 		OS image : https://www.centos.org/download/
 		
@@ -93,9 +93,9 @@ Vmware workstation 16pro setup :
 	
         	cd ~ && git clone https://github.com/thomas6m/OpenShift-4.7_bare_metal_installation.git
 	
+![image](https://user-images.githubusercontent.com/20621916/110901269-07161c80-833f-11eb-9790-203d0197b7b4.png)
 
 
-![image](https://user-images.githubusercontent.com/20621916/110881091-b391d780-831a-11eb-81a7-e10a56969739.png)
 
 	Plumb all the required virtual IPs. 
 	
