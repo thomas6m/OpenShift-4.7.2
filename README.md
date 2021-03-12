@@ -9,16 +9,38 @@
 **Infra Setup:**
 
 	Step 1:  ( ose-infra server - CentOS 8 Minimal Installation ) - https://www.centos.org/download/
-  
- 	
-	      cd ~ && git clone https://github.com/thomas6m/OpenShift-4.7_bare_metal_installation.git
-  
+	
+	Install the required binaries: 
+        
+	dnf -y install net-tools telnet curl wget traceroute nmap-ncat git  httpd-tools jq  nfs-utils
+	 
+	Stop & disable firewalld :
+	
         systemctl stop firewalld && systemctl disable firewalld
+	
+	Stop & disable Selinux :
         
         sed -i s/^SELINUX=.*$/SELINUX=disabled/ /etc/selinux/config && setenforce 0
         
-        
-    
+	Clone the git repo:
+	
+        cd ~ && git clone https://github.com/thomas6m/OpenShift-4.7_bare_metal_installation.git
+	
+	Plumb all the required virtual IPs. 
+	
+	sample config :
+	
+	cat ~/OpenShift-4.7_bare_metal_installation/infra-setup/ifcfg-ens32:0 
+	
+	Disable Ipv6:
+	
+	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/70-ipv6.conf /etc/sysctl.d/70-ipv6.conf
+	
+        sysctl --load /etc/sysctl.d/70-ipv6.conf
+	
+	Install the latest Patches:
+	
+	dnf install -y epel-release && dnf update -y && reboot
 
 ![image](https://user-images.githubusercontent.com/20621916/110881091-b391d780-831a-11eb-81a7-e10a56969739.png)
 
