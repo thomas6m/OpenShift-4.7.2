@@ -6,41 +6,41 @@
 
 ![image](https://user-images.githubusercontent.com/20621916/110800131-dbe7ea80-82b6-11eb-9529-f5fe780a4b97.png)
 
-**Infra Setup:**
+**Infra Setup ( ose-infra-server & workstation ):**
 
-	Step 1:  ( ose-infra server - CentOS 8 Minimal Installation ) - https://www.centos.org/download/
+	( ose-infra-server & Workstation - CentOS 8 Minimal Installation ) - https://www.centos.org/download/
 	
 	Install the required binaries: 
         
-	dnf -y install net-tools telnet curl wget traceroute nmap-ncat git  httpd-tools jq  nfs-utils
+		dnf -y install net-tools telnet curl wget traceroute nmap-ncat git  httpd-tools jq  nfs-utils
 	 
 	Stop & disable firewalld :
 	
-        systemctl stop firewalld && systemctl disable firewalld
+        	systemctl stop firewalld && systemctl disable firewalld
 	
 	Stop & disable Selinux :
         
-        sed -i s/^SELINUX=.*$/SELINUX=disabled/ /etc/selinux/config && setenforce 0
+        	sed -i s/^SELINUX=.*$/SELINUX=disabled/ /etc/selinux/config && setenforce 0
         
 	Clone the git repo:
 	
-        cd ~ && git clone https://github.com/thomas6m/OpenShift-4.7_bare_metal_installation.git
+        	cd ~ && git clone https://github.com/thomas6m/OpenShift-4.7_bare_metal_installation.git
 	
 	Plumb all the required virtual IPs. 
 	
-	sample config :
+		sample config :
 	
-	cat ~/OpenShift-4.7_bare_metal_installation/infra-setup/ifcfg-ens32:0 
+		cat ~/OpenShift-4.7_bare_metal_installation/infra-setup/ifcfg-ens32:0 
 	
 	Disable Ipv6:
 	
-	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/70-ipv6.conf /etc/sysctl.d/70-ipv6.conf
+		cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/70-ipv6.conf /etc/sysctl.d/70-ipv6.conf
 	
-        sysctl --load /etc/sysctl.d/70-ipv6.conf
+        	sysctl --load /etc/sysctl.d/70-ipv6.conf
 	
 	Install the latest Patches:
 	
-	dnf install -y epel-release && dnf update -y && reboot
+		dnf install -y epel-release && dnf update -y && reboot
 
 ![image](https://user-images.githubusercontent.com/20621916/110881091-b391d780-831a-11eb-81a7-e10a56969739.png)
 
