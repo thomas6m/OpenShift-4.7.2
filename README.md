@@ -2,6 +2,37 @@
 
 ![image](https://user-images.githubusercontent.com/20621916/110881401-45014980-831b-11eb-86f9-305b24eedd76.png)
 
+
+OpenShit 4.7 installation on bare metal using UPI method.
+
+Installed Vmware workstation 16 pro on Dell Workstation.
+
+Vmware workstation 16pro setup :
+
+1. Create a hostonly network with 192.168.1.0/24  -- Name : VM-OSE
+
+2. Create VMs with the below specs.
+
+	1. pfsense VM ( act as router & dhcp )
+	    	Guest Operation system : Other -> FreeBSD 12 64-bit
+                Memory : 2 GB /Cpu: 2/Disk : 512GB
+                Network Adapter : 1 from Bridged  &  1 from VM-OSE
+	   	OS image - https://www.pfsense.org/download/     --> AMD64(64-bit) & DVD Image (ISO) installer
+                Boot the server & accept all the default option
+                Once server is up, login to console with https://192.168.1.1  
+                User: admin / Password: pfsense
+
+
+	2.  ose-infra-server & workstation  ( Centos8  with Minimal Installation)
+ 		Memory : 2 GB /Cpu: 2/Disk : 512GB
+		Network Adapter : 1 from Bridged  &  1 from VM-OSE
+
+	3. bootstrap, master1, master2, worker1 & worker2
+	    	Guest Operation system : Linux -> Other Linux5.x and later kernel 64-bit
+                Memory : 32 GB /Cpu: 16/Disk : 1024TB
+                Network Adapter :  1 from VM-OSE
+		
+
 ![image](https://user-images.githubusercontent.com/20621916/110803087-cd4f0280-82b9-11eb-8772-615f6b978524.png)
 
 ![image](https://user-images.githubusercontent.com/20621916/110800131-dbe7ea80-82b6-11eb-9529-f5fe780a4b97.png)
