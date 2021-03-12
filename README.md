@@ -2,9 +2,9 @@
 
 ![image](https://user-images.githubusercontent.com/20621916/110881401-45014980-831b-11eb-86f9-305b24eedd76.png)
 
-**
-OpenShit 4.7 installation on bare metal using UPI method:
-**
+
+**OpenShit 4.7 installation on bare metal using UPI method:**
+
 Install Vmware workstation 16 pro on Highend Workstation.
 
 Vmware workstation 16pro setup :
