@@ -42,7 +42,7 @@ Vmware workstation 16pro setup :
 
 	3. bootstrap, master1, master2, worker1 & worker2
 	
-	    	Guest Operation system : Linux -> Other Linux5.x and later kernel 64-bit
+		Guest Operation system : Linux -> Other Linux5.x and later kernel 64-bit
 		
                 Memory : 32 GB /Cpu: 16/Disk : 1024TB
 		
