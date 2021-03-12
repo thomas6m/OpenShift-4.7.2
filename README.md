@@ -94,7 +94,9 @@
 	
 	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/app-ingress-haproxy.cfg  /etc/api-haproxy/app-ingress-haproxy.cfg
 	
+	systemctl enable api-haproxy && systemctl start api-haproxy && systemctl status api-haproxy
 	
+	systemctl enable app-ingress-haproxy && systemctl start app-ingress-haproxy && systemctl status app-ingress-haproxy
 	
 
 
