@@ -98,13 +98,48 @@
 	
 	systemctl enable app-ingress-haproxy && systemctl start app-ingress-haproxy && systemctl status app-ingress-haproxy
 	
+        Validation:
+	
+	http://api-lb.example.com:9000/
+	
+	http://app-ingress-lb.example.com:9000/
 
 
+**Step 4: Install & Configure HTTPD Server**
 
+	dnf install -y httpd
+	
+	cp -p /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf-bkp
+	
+	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/httpd.conf /etc/httpd/conf/httpd.conf
+    
+        mkdir -p /etc/systemd/system/httpd.service.d
+	
+	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/override.conf  /etc/systemd/system/httpd.service.d/override.conf 
+	
+	systemctl enable httpd && systemctl start httpd && systemctl status httpd
+	
+	Validation:
+	
+  	http://http-server.example.com:8080/
+        
+**Step 5: Install & Configure NFS Server**
 
-
-
-
+	dnf install -y nfs-utils
+	
+	mkdir -p /var/nfsshare/registry
+	
+	chmod -R 777 /var/nfsshare
+	
+	chown -R nobody:nobody /var/nfsshare
+	
+	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/exports /etc/exports
+	
+	systemctl enable nfs-server rpcbind && systemctl start nfs-server rpcbind
+	
+	showmount -e nfs-server
+	
+	
 
 ![image](https://user-images.githubusercontent.com/20621916/110802813-8234ef80-82b9-11eb-9dbb-8172f6a35643.png)
 
