@@ -1,6 +1,7 @@
 # OpenShift 4.7 Installation on Bare Metal using UPI method:
 
-![image](https://user-images.githubusercontent.com/20621916/110904378-d71d4800-8343-11eb-9af8-697bd0e84aef.png)
+![image](https://user-images.githubusercontent.com/20621916/110907407-4dbc4480-8348-11eb-9d7f-ccf0c22a0083.png)
+
 
 Install Vmware workstation 16 pro on Highend Workstation.
 
