@@ -84,7 +84,7 @@
 	
 	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.service  /usr/lib/systemd/system/api-haproxy.service
 
-        cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.service  /usr/lib/systemd/system/app-ingress-haproxy.service
+       	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.service  /usr/lib/systemd/system/app-ingress-haproxy.service
 	
 	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.cfg  /etc/api-haproxy/api-haproxy.cfg
 	
