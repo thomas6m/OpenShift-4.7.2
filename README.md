@@ -1,6 +1,6 @@
 # OpenShift Container Platform 4.7 installation on bare metal
 
-![image](https://user-images.githubusercontent.com/20621916/110881401-45014980-831b-11eb-86f9-305b24eedd76.png)
+![image](https://user-images.githubusercontent.com/20621916/110903572-9d980d00-8342-11eb-9626-fd72af57a6be.png)
 
 
 **OpenShit 4.7 installation on bare metal using UPI method:**
