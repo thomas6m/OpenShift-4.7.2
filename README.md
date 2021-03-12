@@ -342,9 +342,9 @@ Default Kubeadmin password
 
 cat ~/ose-install/auth/kubeadmin-password
 
-**Point your workstation primary dns to 192.168.1.4 & secondary dns to google or ur network dns.  Other wise we will endup in manually updating the window's host file for each wildcard entry**
+**Point your workstation primary dns to 192.168.1.4 & secondary dns to google ( 8.8.8.8 or ur network dns.  Other wise we will endup in manually updating the window's host file for each wildcard entry**
 
-C:\Windows\System32\drivers\etc\hosts
+ Window's host file location:	C:\Windows\System32\drivers\etc\hosts
 
 
 https://console-openshift-console.apps.ose.example.com/
