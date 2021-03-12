@@ -39,10 +39,13 @@ cd ~ && wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/op
 cd ~ && wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz
 
 tar -zxvf openshift-install-linux.tar.gz
+
 tar -zxvf openshift-client-linux.tar.gz
 
 mv kubectl oc openshift-install /usr/local/bin/
+
 oc version
+
 openshift-install version
 
 ssh-keygen
