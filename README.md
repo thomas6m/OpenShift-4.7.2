@@ -8,7 +8,17 @@
 
 **Infra Setup:**
 
-
+	Step 1:  ( ose-infra server - CentOS 8 Minimal Installation ) - https://www.centos.org/download/
+  
+ 	
+	      cd ~ && git clone https://github.com/thomas6m/OpenShift-4.7_bare_metal_installation.git
+  
+        systemctl stop firewalld && systemctl disable firewalld
+        
+        sed -i s/^SELINUX=.*$/SELINUX=disabled/ /etc/selinux/config && setenforce 0
+        
+        
+    
 
 ![image](https://user-images.githubusercontent.com/20621916/110881091-b391d780-831a-11eb-81a7-e10a56969739.png)
 
