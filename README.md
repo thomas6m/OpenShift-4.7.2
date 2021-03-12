@@ -15,7 +15,8 @@ Vmware workstation 16pro setup :
 
 	1. pfsense VM ( act as router & dhcp )
 	
-	    	Guest Operation system : Other -> FreeBSD 12 64-bit
+	    	
+		Guest Operation system : Other -> FreeBSD 12 64-bit
 		
                 Memory : 2 GB /Cpu: 2/Disk : 512GB
 		
