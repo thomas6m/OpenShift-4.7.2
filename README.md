@@ -54,6 +54,8 @@
 
 **Step 2: Install & Configure DNS server**
 
+![image](https://user-images.githubusercontent.com/20621916/110803927-a80ec400-82ba-11eb-81d3-6411a691e2fa.png)
+
 	dnf -y install bind bind-utils
 
 	cp -p /etc/named.conf /etc/named.conf-bkp
@@ -72,6 +74,8 @@
 
 **Step 3: Install & Configure HAPROXY**
 
+![image](https://user-images.githubusercontent.com/20621916/110801837-93c9c780-82b8-11eb-9e8d-0d66abe8f2a7.png)
+
 	dnf install haproxy -y
 	
 	ln -s /usr/sbin/haproxy /usr/sbin/api-haproxy
@@ -83,8 +87,8 @@
 	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/app-ingress-haproxy  /etc/sysconfig/app-ingress-haproxy
 	
 	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.service  /usr/lib/systemd/system/api-haproxy.service
-
-       	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.service  /usr/lib/systemd/system/app-ingress-haproxy.service
+	
+	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.service  /usr/lib/systemd/system/app-ingress-haproxy.service
 	
 	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.cfg  /etc/api-haproxy/api-haproxy.cfg
 	
@@ -93,10 +97,10 @@
 	
 	
 
-![image](https://user-images.githubusercontent.com/20621916/110803927-a80ec400-82ba-11eb-81d3-6411a691e2fa.png)
 
 
-![image](https://user-images.githubusercontent.com/20621916/110801837-93c9c780-82b8-11eb-9e8d-0d66abe8f2a7.png)
+
+
 
 
 
