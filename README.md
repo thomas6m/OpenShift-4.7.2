@@ -1,6 +1,4 @@
 # OpenShift Container Platform 4.7 installation on bare metal
-OpenShift Container Platform 4.7 installation on bare metal
-
 
 ![image](https://user-images.githubusercontent.com/20621916/110802174-e7d4ac00-82b8-11eb-9201-2b50f9cb8a0d.png)
 
