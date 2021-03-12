@@ -62,6 +62,7 @@ openshift-install create manifests --dir=ose-install/
 openshift-install create ignition-configs --dir=ose-install/
 
 tar -cvf ose-install.tar ose-install
+
 scp ose-install.tar root@ose-infra-server:/tmp/
 
 **Login to ose-infra-server** 
@@ -69,8 +70,11 @@ scp ose-install.tar root@ose-infra-server:/tmp/
 cd ~ ; tar -xvf /tmp/ose-install.tar
 
 mkdir /var/www/html/ose
+
 cp -R ~/ose-install/* /var/www/html/ose/
+
 chown -R apache: /var/www/html/
+
 chmod -R 755 /var/www/html/
 
 Boot the bootstrap, master & worker VMs from rhcos live iso image
