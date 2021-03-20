@@ -486,9 +486,10 @@ https://console-openshift-console.apps.ose.example.com/
 
 **Gracefull shutdown of cluster**
 
-https://docs.openshift.com/container-platform/4.7/backup_and_restore/graceful-cluster-shutdown.html
 
+Execute the below command from workstation server
 
+export KUBECONFIG=~/ose-install/auth/kubeconfig
 
 nodes=$(oc get nodes -o jsonpath='{.items[*].metadata.name}')
 
