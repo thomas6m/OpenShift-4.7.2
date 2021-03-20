@@ -343,7 +343,9 @@ Wait till the console operator & other operators are fully up.
 ![image](https://user-images.githubusercontent.com/20621916/111869070-826b7400-89b8-11eb-9d9f-526ad2374ef8.png)
 
 
-watch -n5 oc get clusteroperators
+watch -n 0.1 oc get clusteroperators
+
+![image](https://user-images.githubusercontent.com/20621916/111869476-bb0c4d00-89ba-11eb-89b7-e70f645032d9.png)
 
 
 Default Kubeadmin password 
