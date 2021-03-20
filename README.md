@@ -427,6 +427,42 @@ oc get pv
 ![image](https://user-images.githubusercontent.com/20621916/111873237-548f2b00-89ca-11eb-8bd9-03e645e736a2.png)
 
 
+**Configuring an HTPasswd identity provider:**
+
+
+To define an HTPasswd identity provider we must perform the following steps:
+
+1. Create an htpasswd file to store the user and password information.
+
+cd /root/OpenShift-4.7_bare_metal_installation/ocp-4.7
+
+cat my_htpasswd_provider.yaml
+
+htpasswd -c -B -b </path/to/users.htpasswd> <user_name> <password>
+
+htpasswd -c -B -b  users.htpasswd  user1  password1
+
+![image](https://user-images.githubusercontent.com/20621916/111873810-2828de00-89cd-11eb-956a-b76654ac08a0.png)
+
+
+2. Create an OpenShift Container Platform secret to represent the htpasswd file.
+
+oc create secret generic htpass-secret --from-file=htpasswd=users.htpasswd -n openshift-config
+
+![image](https://user-images.githubusercontent.com/20621916/111873826-3676fa00-89cd-11eb-871e-10fb09df79f6.png)
+
+
+3. Define the HTPasswd identity provider resource.
+
+cat my_htpasswd_provider.yaml
+
+![image](https://user-images.githubusercontent.com/20621916/111873793-147d7780-89cd-11eb-9510-99b885dcfc94.png)
+
+
+4. Apply the resource to the default OAuth configuration.
+
+oc apply -f my_htpasswd_provider.yaml
+
 
 
 **Gracefull shutdown of cluster**
