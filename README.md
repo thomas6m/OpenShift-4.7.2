@@ -424,7 +424,8 @@ oc get pv
 
 
 
-![image](https://user-images.githubusercontent.com/20621916/111871976-d6318980-89c7-11eb-9aba-dbe57170dc6d.png)
+![image](https://user-images.githubusercontent.com/20621916/111873237-548f2b00-89ca-11eb-8bd9-03e645e736a2.png)
+
 
 
 
