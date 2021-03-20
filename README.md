@@ -411,7 +411,9 @@ oc edit configs.imageregistry.operator.openshift.io
 
 ![image](https://user-images.githubusercontent.com/20621916/111871879-51467000-89c7-11eb-8327-95fa2c042202.png)
 
-Change the managmentState: from Removed to Managed. Under storage: add the pvc: and claim: blank to attach the PV and save your changes
+Change the managmentState: from Removed to Managed. 
+
+Under storage: add the pvc: and claim: blank to attach the PV and save your changes
 
 ![image](https://user-images.githubusercontent.com/20621916/111871933-a08ca080-89c7-11eb-8ea3-6b5c8ad8beac.png)
 
