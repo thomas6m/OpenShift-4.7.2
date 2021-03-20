@@ -373,6 +373,9 @@ After installation, we must edit the Image Registry Operator configuration to sw
 
 **Image registry storage configuration:**
 
+![image](https://user-images.githubusercontent.com/20621916/111872517-cc5c5600-89c8-11eb-8775-da704553e5b0.png)
+
+
 ![image](https://user-images.githubusercontent.com/20621916/111871992-e9445980-89c7-11eb-8e83-04129e0bc607.png)
 
 
@@ -389,11 +392,32 @@ After installation, we must edit the Image Registry Operator configuration to sw
 
 ![image](https://user-images.githubusercontent.com/20621916/111871933-a08ca080-89c7-11eb-8ea3-6b5c8ad8beac.png)
 
+oc get pod -n openshift-image-registry
+
+
+
+showmount -e nfs-server.example.com
+
+oc get pv
+
+cd /root/OpenShift-4.7_bare_metal_installation/ocp-4.7
+
+cat registry_pv.yaml
+
+oc create -f registry_pv.yaml
+
+oc get pv
+
+oc edit configs.imageregistry.operator.openshift.io
+
+oc get pv
+
+![image](https://user-images.githubusercontent.com/20621916/111872186-b64e9580-89c8-11eb-9814-5180e7d3086b.png)
+
 
 
 ![image](https://user-images.githubusercontent.com/20621916/111871976-d6318980-89c7-11eb-9aba-dbe57170dc6d.png)
 
-![image](https://user-images.githubusercontent.com/20621916/111872041-39bbb700-89c8-11eb-9f19-966453d7de2d.png)
 
 
 **Gracefull shutdown of cluster**
