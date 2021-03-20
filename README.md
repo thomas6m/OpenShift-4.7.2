@@ -152,7 +152,7 @@ Vmware workstation 16pro setup :
 	
 	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.service  /usr/lib/systemd/system/api-haproxy.service
 	
-	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.service  /usr/lib/systemd/system/app-ingress-haproxy.service
+	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/app-ingress-haproxy.service  /usr/lib/systemd/system/app-ingress-haproxy.service
 	
 	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.cfg  /etc/api-haproxy/api-haproxy.cfg
 	
@@ -309,7 +309,7 @@ Once bootstrap complete. Remove the bootstrap entry from api-load balancer.
 
 **Login to ose-infra server**
 
-sed -i.bak '/ bootstrap / s/^\(.*\)$/#\1/g' /etc/api-haproxy/api-haproxy.cfg
+cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.cfg-without-bootstrap  /etc/api-haproxy/api-haproxy.cfg
 
 systemctl restart api-haproxy
 
