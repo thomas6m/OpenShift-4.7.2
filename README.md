@@ -125,6 +125,13 @@ Vmware workstation 16pro setup :
 
 	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/named.conf  /etc/named.conf 
 
+Note: Replace 192.168.86.0/24 with your WAN network subnet in /etc/named.conf 
+      This will allow dns query from your desktop. 
+
+**allow-query     { localhost; 192.168.86.0/24; 192.168.1.0/24; };**
+
+
+
 	cp  ~/OpenShift-4.7_bare_metal_installation/infra-setup/named.conf.local  /etc/named/named.conf.local
 
 	mkdir /etc/named/zones
