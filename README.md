@@ -151,31 +151,38 @@ Note: Replace 192.168.86.0/24 with your WAN network subnet in /etc/named.conf
 
 	dnf install haproxy -y
 	
+
 	ln -s /usr/sbin/haproxy /usr/sbin/api-haproxy
+
+	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy  /etc/sysconfig/api-haproxy 
+
+	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.service  /usr/lib/systemd/system/api-haproxy.service
+
+	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.cfg  /etc/api-haproxy/api-haproxy.cfg
+
+	systemctl enable api-haproxy && systemctl start api-haproxy && systemctl status api-haproxy
+
+
+	Validation:
+	
+	http://192.168.1.7:9000/    		or   	http://api-lb.example.com:9000/
+
+
 	
 	ln -s /usr/sbin/haproxy /usr/sbin/app-ingress-haproxy
 	
-	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy  /etc/sysconfig/api-haproxy 
-	
 	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/app-ingress-haproxy  /etc/sysconfig/app-ingress-haproxy
-	
-	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.service  /usr/lib/systemd/system/api-haproxy.service
 	
 	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/app-ingress-haproxy.service  /usr/lib/systemd/system/app-ingress-haproxy.service
 	
-	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.cfg  /etc/api-haproxy/api-haproxy.cfg
-	
 	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/app-ingress-haproxy.cfg  /etc/api-haproxy/app-ingress-haproxy.cfg
-	
-	systemctl enable api-haproxy && systemctl start api-haproxy && systemctl status api-haproxy
 	
 	systemctl enable app-ingress-haproxy && systemctl start app-ingress-haproxy && systemctl status app-ingress-haproxy
 	
 	Validation:
 	
-	http://api-lb.example.com:9000/
+	http://192.168.1.8:9000/     		or 	http://app-ingress-lb.example.com:9000/
 	
-	http://app-ingress-lb.example.com:9000/
 
 
 **Step 4: Install & Configure HTTPD Server**
