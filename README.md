@@ -7,7 +7,7 @@ Install Vmware workstation 16 pro on Highend Workstation.
 
 Vmware workstation 16pro setup :
 
-1. Create a hostonly network with 192.168.1.0/24  -- Name : VM-OSE
+1. Create a hostonly network with 192.168.1.0/24  -- Name : OSEnet
 
 2. Create VMs with the below specs.
 
@@ -18,7 +18,7 @@ Vmware workstation 16pro setup :
 		
                 Memory : 2 GB /Cpu: 2/Disk : 512GB
 		
-                Network Adapter : 1 from Bridged  &  1 from VM-OSE
+                Network Adapter : 1 from Bridged  &  1 from OSEnet
 		
 	   	OS image - https://www.pfsense.org/download/     --> AMD64(64-bit) & DVD Image (ISO) installer
 		
@@ -34,7 +34,7 @@ Vmware workstation 16pro setup :
  		
 		Memory : 2 GB /Cpu: 2/Disk : 512GB
 		
-	        Network Adapter : 1 from VM-OSE
+	        Network Adapter : 1 from OSEnet
 		
 		OS image : https://www.centos.org/download/
 		
@@ -45,7 +45,7 @@ Vmware workstation 16pro setup :
 		
                 Memory : 32 GB /Cpu: 16/Disk : 1024TB
 		
-                Network Adapter :  1 from VM-OSE
+                Network Adapter :  1 from OSEnet
 		
 		RHCOS latest image : https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/latest/latest/rhcos-live.x86_64.iso
 		
@@ -338,7 +338,10 @@ oc get csr
 
 Keep checking & approving the pending CSR.  Stop once all nodes( master & worker ) are in ready state. 
 
-Wait till the console operator & other are fully up. 
+Wait till the console operator & other operators are fully up. 
+
+![image](https://user-images.githubusercontent.com/20621916/111869070-826b7400-89b8-11eb-9d9f-526ad2374ef8.png)
+
 
 watch -n5 oc get clusteroperators
 
