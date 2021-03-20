@@ -373,6 +373,14 @@ After installation, we must edit the Image Registry Operator configuration to sw
 
 **Image registry storage configuration:**
 
+![image](https://user-images.githubusercontent.com/20621916/111871992-e9445980-89c7-11eb-8e83-04129e0bc607.png)
+
+
+![image](https://user-images.githubusercontent.com/20621916/111871999-f3feee80-89c7-11eb-8140-d7f9002dbb61.png)
+
+
+![image](https://user-images.githubusercontent.com/20621916/111872007-02e5a100-89c8-11eb-872d-e0e7214a0e13.png)
+
 
 
 ![image](https://user-images.githubusercontent.com/20621916/111871879-51467000-89c7-11eb-8327-95fa2c042202.png)
@@ -382,6 +390,8 @@ After installation, we must edit the Image Registry Operator configuration to sw
 ![image](https://user-images.githubusercontent.com/20621916/111871933-a08ca080-89c7-11eb-8ea3-6b5c8ad8beac.png)
 
 
+
+![image](https://user-images.githubusercontent.com/20621916/111871976-d6318980-89c7-11eb-9aba-dbe57170dc6d.png)
 
 
 
