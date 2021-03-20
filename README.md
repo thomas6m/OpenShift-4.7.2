@@ -379,7 +379,8 @@ After installation, we must edit the Image Registry Operator configuration to sw
 
 
 
-![image](https://user-images.githubusercontent.com/20621916/111871918-8783ef80-89c7-11eb-8cf3-6ad26f402972.png)
+![image](https://user-images.githubusercontent.com/20621916/111871933-a08ca080-89c7-11eb-8ea3-6b5c8ad8beac.png)
+
 
 
 
