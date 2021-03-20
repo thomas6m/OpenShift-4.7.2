@@ -29,8 +29,6 @@ master2.ose.example.com.        IN      A       192.168.1.202
 master3.ose.example.com.        IN      A       192.168.1.203
 worker1.ose.example.com.        IN      A       192.168.1.204
 worker2.ose.example.com.        IN      A       192.168.1.205
-infra1.ose.example.com.        IN      A        192.168.1.206
-infra2.ose.example.com.        IN      A        192.168.1.207
 
 ; OpenShift internal cluster IPs - A records
 api.ose.example.com.           IN       A       192.168.1.7
