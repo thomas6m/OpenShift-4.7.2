@@ -3,6 +3,10 @@
 ![image](https://user-images.githubusercontent.com/20621916/110907407-4dbc4480-8348-11eb-9d7f-ccf0c22a0083.png)
 
 
+![image](https://user-images.githubusercontent.com/20621916/110803087-cd4f0280-82b9-11eb-8772-615f6b978524.png)
+
+![image](https://user-images.githubusercontent.com/20621916/111868634-096b1d00-89b6-11eb-9f94-625fefea2d89.png)
+
 Install Vmware workstation 16 pro on Highend Workstation.
 
 Vmware workstation 16pro setup :
@@ -66,9 +70,7 @@ Vmware workstation 16pro setup :
 		
 		
 
-![image](https://user-images.githubusercontent.com/20621916/110803087-cd4f0280-82b9-11eb-8772-615f6b978524.png)
 
-![image](https://user-images.githubusercontent.com/20621916/111868634-096b1d00-89b6-11eb-9f94-625fefea2d89.png)
 
 **Infra Server Setup ( ose-infra-server & workstation ):**
 
