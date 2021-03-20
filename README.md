@@ -97,11 +97,10 @@ Vmware workstation 16pro setup :
 
 	Plumb all the required virtual IPs. 
 	
-		sample config :
+		Change the interface name as per your server's naming convention:
 	
-		cat ~/OpenShift-4.7_bare_metal_installation/infra-setup/ifcfg-ens32:0 
+		cp  ~/OpenShift-4.7_bare_metal_installation/infra-setup/ifcfg-ens32*  /etc/sysconfig/network-scripts/
 	 
-	 	vi /etc/sysconfig/network-scripts/ifcfg-ens33:X
 		
 	Disable Ipv6:
 	
