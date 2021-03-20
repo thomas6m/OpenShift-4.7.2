@@ -363,6 +363,26 @@ cat ~/ose-install/auth/kubeadmin-password
 
 https://console-openshift-console.apps.ose.example.com/
 
+**Image registry removed during installation :**
+
+On platforms that do not provide shareable object storage, the OpenShift Image Registry Operator bootstraps itself as Removed. 
+This allows openshift-installer to complete installations on these platform types.
+
+After installation, we must edit the Image Registry Operator configuration to switch the managementState from Removed to Managed.
+
+
+**Image registry storage configuration:**
+
+
+
+![image](https://user-images.githubusercontent.com/20621916/111871879-51467000-89c7-11eb-8327-95fa2c042202.png)
+
+
+
+![image](https://user-images.githubusercontent.com/20621916/111871918-8783ef80-89c7-11eb-8cf3-6ad26f402972.png)
+
+
+
 
 **Gracefull shutdown of cluster**
 
