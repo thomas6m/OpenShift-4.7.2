@@ -373,34 +373,37 @@ After installation, we must edit the Image Registry Operator configuration to sw
 
 **Image registry storage configuration:**
 
+
+oc get pod -n openshift-image-registry
+
+
 ![image](https://user-images.githubusercontent.com/20621916/111872517-cc5c5600-89c8-11eb-8775-da704553e5b0.png)
+
+
+showmount -e nfs-server.example.com
+
 
 
 ![image](https://user-images.githubusercontent.com/20621916/111871992-e9445980-89c7-11eb-8e83-04129e0bc607.png)
 
 
+oc get pv
+
+
+
 ![image](https://user-images.githubusercontent.com/20621916/111871999-f3feee80-89c7-11eb-8140-d7f9002dbb61.png)
 
-
-![image](https://user-images.githubusercontent.com/20621916/111872007-02e5a100-89c8-11eb-872d-e0e7214a0e13.png)
-
-
-
-
-
-oc get pod -n openshift-image-registry
-
-
-
-showmount -e nfs-server.example.com
-
-oc get pv
 
 cd /root/OpenShift-4.7_bare_metal_installation/ocp-4.7
 
 cat registry_pv.yaml
 
 oc create -f registry_pv.yaml
+
+![image](https://user-images.githubusercontent.com/20621916/111872007-02e5a100-89c8-11eb-872d-e0e7214a0e13.png)
+
+
+
 
 oc get pv
 
