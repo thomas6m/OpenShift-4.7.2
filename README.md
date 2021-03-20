@@ -68,7 +68,8 @@ Vmware workstation 16pro setup :
 		
 		DHCP Static Mappings for this Interface : ( Get the MAC address of OSEnet interface from all the newly create VM & update here )
 		
-		
+		![image](https://user-images.githubusercontent.com/20621916/111874323-b1d9ab00-89cf-11eb-8fc2-150ca98f4652.png)
+
 
 
 
