@@ -91,7 +91,7 @@ Vmware workstation 16pro setup :
 	
         	cd ~ && git clone https://github.com/thomas6m/OpenShift-4.7_bare_metal_installation.git
 	
-![image](https://user-images.githubusercontent.com/20621916/110901269-07161c80-833f-11eb-9790-203d0197b7b4.png)
+![image](https://user-images.githubusercontent.com/20621916/111868329-4d5d2280-89b4-11eb-87bb-d2136174ed25.png)
 
 
 
