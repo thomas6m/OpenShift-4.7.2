@@ -92,7 +92,7 @@ Vmware workstation 16pro setup :
         
 	Clone the git repo:
 	
-        	cd ~ && git clone https://github.com/thomas6m/OpenShift-4.7_bare_metal_installation.git
+        	cd ~ && git  clone https://github.com/thomas6m/OpenShift-4.7.2.git
 	
 ![image](https://user-images.githubusercontent.com/20621916/111868329-4d5d2280-89b4-11eb-87bb-d2136174ed25.png)
 
@@ -102,12 +102,12 @@ Vmware workstation 16pro setup :
 	
 		Change the interface name as per your server's naming convention:
 	
-		cp  ~/OpenShift-4.7_bare_metal_installation/infra-setup/ifcfg-ens32*  /etc/sysconfig/network-scripts/
+		cp  ~/OpenShift-4.7.2/infra-setup/ifcfg-ens32*  /etc/sysconfig/network-scripts/
 	 
 		
 	Disable Ipv6:
 	
-		cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/70-ipv6.conf /etc/sysctl.d/70-ipv6.conf
+		cp ~/OpenShift-4.7.2/infra-setup/70-ipv6.conf /etc/sysctl.d/70-ipv6.conf
 	
         	sysctl --load /etc/sysctl.d/70-ipv6.conf
 	
@@ -126,7 +126,7 @@ Vmware workstation 16pro setup :
 
 	cp -p /etc/named.conf /etc/named.conf-bkp
 
-	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/named.conf  /etc/named.conf 
+	cp ~/OpenShift-4.7.2/infra-setup/named.conf  /etc/named.conf 
 
 Note: Replace 192.168.86.0/24 with your WAN network subnet in /etc/named.conf 
       This will allow dns query from your desktop. 
@@ -135,13 +135,13 @@ Note: Replace 192.168.86.0/24 with your WAN network subnet in /etc/named.conf
 
 
 
-	cp  ~/OpenShift-4.7_bare_metal_installation/infra-setup/named.conf.local  /etc/named/named.conf.local
+	cp  ~/OpenShift-4.7.2/infra-setup/named.conf.local  /etc/named/named.conf.local
 
 	mkdir /etc/named/zones
 
-	cp  ~/OpenShift-4.7_bare_metal_installation/infra-setup/db.example.com /etc/named/zones/db.example.com
+	cp  ~/OpenShift-4.7.2/infra-setup/db.example.com /etc/named/zones/db.example.com
 
-	cp  ~/OpenShift-4.7_bare_metal_installation/infra-setup/db.192.168.1  /etc/named/zones/db.192.168.1
+	cp  ~/OpenShift-4.7.2/infra-setup/db.192.168.1  /etc/named/zones/db.192.168.1
 
 	systemctl enable named && systemctl start named && systemctl status named
 
@@ -154,11 +154,11 @@ Note: Replace 192.168.86.0/24 with your WAN network subnet in /etc/named.conf
 
 	ln -s /usr/sbin/haproxy /usr/sbin/api-haproxy
 
-	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy  /etc/sysconfig/api-haproxy 
+	cp ~/OpenShift-4.7.2/infra-setup/api-haproxy  /etc/sysconfig/api-haproxy 
 
-	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.service  /usr/lib/systemd/system/api-haproxy.service
+	cp ~/OpenShift-4.7.2/infra-setup/api-haproxy.service  /usr/lib/systemd/system/api-haproxy.service
 
-	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.cfg  /etc/api-haproxy/api-haproxy.cfg
+	cp ~/OpenShift-4.7.2/infra-setup/api-haproxy.cfg  /etc/api-haproxy/api-haproxy.cfg
 
 	systemctl enable api-haproxy && systemctl start api-haproxy && systemctl status api-haproxy
 
@@ -171,11 +171,11 @@ Note: Replace 192.168.86.0/24 with your WAN network subnet in /etc/named.conf
 	
 	ln -s /usr/sbin/haproxy /usr/sbin/app-ingress-haproxy
 	
-	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/app-ingress-haproxy  /etc/sysconfig/app-ingress-haproxy
+	cp ~/OpenShift-4.7.2/infra-setup/app-ingress-haproxy  /etc/sysconfig/app-ingress-haproxy
 	
-	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/app-ingress-haproxy.service  /usr/lib/systemd/system/app-ingress-haproxy.service
+	cp ~/OpenShift-4.7.2/infra-setup/app-ingress-haproxy.service  /usr/lib/systemd/system/app-ingress-haproxy.service
 	
-	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/app-ingress-haproxy.cfg  /etc/api-haproxy/app-ingress-haproxy.cfg
+	cp ~/OpenShift-4.7.2/infra-setup/app-ingress-haproxy.cfg  /etc/api-haproxy/app-ingress-haproxy.cfg
 	
 	systemctl enable app-ingress-haproxy && systemctl start app-ingress-haproxy && systemctl status app-ingress-haproxy
 	
@@ -191,11 +191,11 @@ Note: Replace 192.168.86.0/24 with your WAN network subnet in /etc/named.conf
 	
 	cp -p /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf-bkp
 	
-	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/httpd.conf /etc/httpd/conf/httpd.conf
+	cp ~/OpenShift-4.7.2/infra-setup/httpd.conf /etc/httpd/conf/httpd.conf
    	
 	mkdir -p /etc/systemd/system/httpd.service.d
 	
-	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/override.conf  /etc/systemd/system/httpd.service.d/override.conf 
+	cp ~/OpenShift-4.7.2/infra-setup/override.conf  /etc/systemd/system/httpd.service.d/override.conf 
 	
 	systemctl enable httpd && systemctl start httpd && systemctl status httpd
 	
@@ -213,7 +213,7 @@ Note: Replace 192.168.86.0/24 with your WAN network subnet in /etc/named.conf
 	
 	chown -R nobody:nobody /var/nfsshare
 	
-	cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/exports /etc/exports
+	cp ~/OpenShift-4.7.2/infra-setup/exports /etc/exports
 	
 	systemctl enable nfs-server rpcbind && systemctl start nfs-server rpcbind
 	
@@ -260,13 +260,13 @@ openshift-install version
 
 ssh-keygen
 
-cd ~ &&  git clone https://github.com/thomas6m/OpenShift-4.7_bare_metal_installation.git
+cd ~ &&  git clone https://github.com/thomas6m/OpenShift-4.7.2.git
 
 mkdir ~/ose-install
 
 cat ~/.ssh/id_rsa.pub
 
-cp ~/OpenShift-4.7_bare_metal_installation/ocp-4.7/install-config.yaml  ~/ose-install/
+cp ~/OpenShift-4.7.2/ocp-4.7/install-config.yaml  ~/ose-install/
 
 Create login id in https://cloud.redhat.com/openshift   -->  Create Cluster --> Datacenter  --> Bare Metal --> User-provisioned infrastructure --> Copy pull secret 
 
@@ -325,7 +325,7 @@ Once bootstrap complete. Remove the bootstrap entry from api-load balancer.
 
 **Login to ose-infra server**
 
-cp ~/OpenShift-4.7_bare_metal_installation/infra-setup/api-haproxy.cfg-without-bootstrap  /etc/api-haproxy/api-haproxy.cfg
+cp ~/OpenShift-4.7.2/infra-setup/api-haproxy.cfg-without-bootstrap  /etc/api-haproxy/api-haproxy.cfg
 
 systemctl restart api-haproxy
 
@@ -404,7 +404,7 @@ oc get pv
 ![image](https://user-images.githubusercontent.com/20621916/111871999-f3feee80-89c7-11eb-8140-d7f9002dbb61.png)
 
 
-cd /root/OpenShift-4.7_bare_metal_installation/ocp-4.7
+cd /root/OpenShift-4.7.2/ocp-4.7
 
 cat registry_pv.yaml
 
@@ -444,7 +444,7 @@ To define an HTPasswd identity provider we must perform the following steps:
 
 1. Create an htpasswd file to store the user and password information.
 
-cd /root/OpenShift-4.7_bare_metal_installation/ocp-4.7
+cd /root/OpenShift-4.7.2/ocp-4.7
 
 cat my_htpasswd_provider.yaml
 
