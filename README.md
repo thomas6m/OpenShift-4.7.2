@@ -464,10 +464,28 @@ cat my_htpasswd_provider.yaml
 oc apply -f my_htpasswd_provider.yaml
 
 
+oc adm policy add-cluster-role-to-user cluster-admin <username>
+
+oc adm policy add-cluster-role-to-user cluster-admin user1
+
+![image](https://user-images.githubusercontent.com/20621916/111873939-c2892180-89cd-11eb-91da-00d73bac7367.png)
+
+
+Login to the console with new user
+
+https://console-openshift-console.apps.ose.example.com/
+
+![image](https://user-images.githubusercontent.com/20621916/111873871-7807a500-89cd-11eb-9468-08decec35d3c.png)
+
+
+![image](https://user-images.githubusercontent.com/20621916/111873979-f7957400-89cd-11eb-862e-ea8a889e6196.png)
+
+
 
 **Gracefull shutdown of cluster**
 
 https://docs.openshift.com/container-platform/4.7/backup_and_restore/graceful-cluster-shutdown.html
+
 
 
 nodes=$(oc get nodes -o jsonpath='{.items[*].metadata.name}')
