@@ -68,7 +68,7 @@ Vmware workstation 16pro setup :
 
 ![image](https://user-images.githubusercontent.com/20621916/110803087-cd4f0280-82b9-11eb-8772-615f6b978524.png)
 
-![image](https://user-images.githubusercontent.com/20621916/110800131-dbe7ea80-82b6-11eb-9529-f5fe780a4b97.png)
+![image](https://user-images.githubusercontent.com/20621916/111868634-096b1d00-89b6-11eb-9f94-625fefea2d89.png)
 
 **Infra Server Setup ( ose-infra-server & workstation ):**
 
