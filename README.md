@@ -393,6 +393,7 @@ After installation, we must edit the Image Registry Operator configuration to sw
 
 ![image](https://user-images.githubusercontent.com/20621916/111871976-d6318980-89c7-11eb-9aba-dbe57170dc6d.png)
 
+![image](https://user-images.githubusercontent.com/20621916/111872041-39bbb700-89c8-11eb-9f19-966453d7de2d.png)
 
 
 **Gracefull shutdown of cluster**
