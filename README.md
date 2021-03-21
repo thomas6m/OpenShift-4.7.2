@@ -272,6 +272,8 @@ Create login id in https://cloud.redhat.com/openshift   -->  Create Cluster --> 
 
 ![image](https://user-images.githubusercontent.com/20621916/110893983-fd39ec80-8331-11eb-8d30-fef351a9f098.png)
 
+![image](https://user-images.githubusercontent.com/20621916/111888980-639ec900-8a1c-11eb-8426-a51f9ecc0a90.png)
+
 
 add ssh public key & pull secret in  ~/ose-install/install-config.yaml
 
