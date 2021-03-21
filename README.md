@@ -226,10 +226,9 @@ Note: Replace 192.168.86.0/24 with your WAN network subnet in /etc/named.conf
 ![image](https://user-images.githubusercontent.com/20621916/110802813-8234ef80-82b9-11eb-9dbb-8172f6a35643.png)
 
 
-![image](https://user-images.githubusercontent.com/20621916/110803468-30409980-82ba-11eb-8c4d-2e662df261a0.png)
 
 
-
+![image](https://user-images.githubusercontent.com/20621916/111890185-1887b480-8a22-11eb-89f5-035849c2538f.png)
 
 
 **RHCOS latest image** :
