@@ -264,22 +264,31 @@ cd ~ &&  git clone https://github.com/thomas6m/OpenShift-4.7.2.git
 
 ![image](https://user-images.githubusercontent.com/20621916/111888980-639ec900-8a1c-11eb-8426-a51f9ecc0a90.png)
 
+**1. Create Installation Folder **
 
 mkdir ~/ose-install
 
 cat ~/.ssh/id_rsa.pub
 
-cp ~/OpenShift-4.7.2/ocp-4.7/install-config.yaml  ~/ose-install/
+
 
 Create login id in https://cloud.redhat.com/openshift   -->  Create Cluster --> Datacenter  --> Bare Metal --> User-provisioned infrastructure --> Copy pull secret 
 
 ![image](https://user-images.githubusercontent.com/20621916/110893983-fd39ec80-8331-11eb-8d30-fef351a9f098.png)
 
+**2. Create Install-config yaml file**
+
+cp ~/OpenShift-4.7.2/ocp-4.7/install-config.yaml  ~/ose-install/
 
 
 add ssh public key & pull secret in  ~/ose-install/install-config.yaml
 
+**3. Generate Kubernetes manifests**
+
 openshift-install create manifests --dir=ose-install/
+
+**4. Generate RHCOS ignition config files**
+
 
 openshift-install create ignition-configs --dir=ose-install/
 
@@ -298,6 +307,8 @@ cp -R ~/ose-install/* /var/www/html/ose/
 chown -R apache: /var/www/html/
 
 chmod -R 755 /var/www/html/
+
+**5. Start the Installation** 
 
 Boot the bootstrap, master & worker VMs from rhcos live iso image
 
