@@ -159,8 +159,8 @@ Note: Replace 192.168.86.0/24 with your WAN network subnet in /etc/named.conf
 	cp ~/OpenShift-4.7.2/infra-setup/api-haproxy  /etc/sysconfig/api-haproxy 
 
 	cp ~/OpenShift-4.7.2/infra-setup/api-haproxy.service  /usr/lib/systemd/system/api-haproxy.service
-
-        mkdir /etc/api-haproxy
+	
+	mkdir /etc/api-haproxy
 
 	cp ~/OpenShift-4.7.2/infra-setup/api-haproxy.cfg  /etc/api-haproxy/api-haproxy.cfg
 
@@ -178,8 +178,8 @@ Note: Replace 192.168.86.0/24 with your WAN network subnet in /etc/named.conf
 	cp ~/OpenShift-4.7.2/infra-setup/app-ingress-haproxy  /etc/sysconfig/app-ingress-haproxy
 	
 	cp ~/OpenShift-4.7.2/infra-setup/app-ingress-haproxy.service  /usr/lib/systemd/system/app-ingress-haproxy.service
- 
-        mkdir /etc/app-ingress-haproxy
+	
+	mkdir /etc/app-ingress-haproxy
 	
 	cp ~/OpenShift-4.7.2/infra-setup/app-ingress-haproxy.cfg  /etc/app-ingress-haproxy/app-ingress-haproxy.cfg
 	
