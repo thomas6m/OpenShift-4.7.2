@@ -1,6 +1,8 @@
 # OpenShift 4.7 Installation on Bare Metal using UPI method:
 
 
+https://youtu.be/6KjCcyRSc34
+
 ![image](https://user-images.githubusercontent.com/20621916/111890290-0eb28100-8a23-11eb-88ba-50c006bcac90.png)
 
 
