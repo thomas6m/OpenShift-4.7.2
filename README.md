@@ -100,7 +100,7 @@ Vmware workstation 16pro setup :
 
 
 
-	Plumb all the required virtual IPs. 
+	**Plumb all the required virtual IPs in OSE-SERVER.** 
 	
 		Change the interface name as per your server's naming convention:
 	
