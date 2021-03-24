@@ -265,7 +265,6 @@ openshift-install version
 
 ssh-keygen
 
-cd ~ &&  git clone https://github.com/thomas6m/OpenShift-4.7.2.git
 
 ![image](https://user-images.githubusercontent.com/20621916/111888980-639ec900-8a1c-11eb-8426-a51f9ecc0a90.png)
 
